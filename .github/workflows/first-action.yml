@@ -1,0 +1,19 @@
+# We start with  the keyword "name"
+name: First Workflow
+
+# Then, with the keyword "on", we specify the events that we want to trigger on this workflow (one or many events)
+on: workflow_dispatch
+
+# keyword "jobs" indicated what needs to be done in this event. Indentation is important
+jobs:
+  first-job: 
+    # We must specify the Runner
+    runs-on: ubuntu-latest
+
+    # We define the steps now
+    steps:
+      - name: Print greeting
+        run: echo "Hello world!"
+      - name: Print goodbye
+        run: echo "Done- Bye"
+        
